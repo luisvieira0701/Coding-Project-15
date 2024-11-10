@@ -26,7 +26,7 @@ console.log(`Portfolio Allocation: ${portfolioAllocation}`)
 
 //HTML addition
 let div1 = document.getElementById("portfolio-value")
-div1.textContent = `Portfolio Value: ${portfolioAllocation}`
+div1.textContent = `Portfolio Value: $${portfolioAllocation}`
 
 let div2 = document.getElementById("portfolio-allocation")
 div2.textContent = `Portfolio Allocation: ${portfolioAllocation}`

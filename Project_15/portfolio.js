@@ -6,7 +6,7 @@ export function calculatePortfolioValue(){
       return total + (asset.price * asset.quantity)
     }, 0)
 
-    return `Total Portfolio Value: $${totalAssetValue}`
+    return totalAssetValue
 }
 
 export function getPortfolioAllocation() {
@@ -17,11 +17,7 @@ export function getPortfolioAllocation() {
       return assetArray.map(asset => {
         const assetValue = asset.price * asset.quantity
         const pctAllocation = ((assetValue / totalValue) * 100).toFixed(2)
-      return {
-        name: asset.name,
-        type: asset.type,
-        allocationPercentage: `${pctAllocation}%`
-      }  
+      return  `${asset.name}, ${asset.type}, ${pctAllocation}%`  
 
-      })
+      }).join(', ')
 }
