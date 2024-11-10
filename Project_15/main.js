@@ -32,16 +32,16 @@ let div2 = document.getElementById("portfolio-allocation")
 div2.textContent = `Portfolio Allocation: ${portfolioAllocation}`
 
 let p1 = document.getElementById("transaction1")
-p1.textContent = `${transaction1.updateAssetQuantity()}`
+p1.textContent = transaction1.updateAssetQuantity()
 
 let p2 = document.getElementById("transaction2")
-p2.textContent = `${transaction2.updateAssetQuantity()}`
+p2.textContent = transaction2.updateAssetQuantity()
 
 let p3 = document.getElementById("transaction3")
-p3.textContent = `${transaction3.updateAssetQuantity()}`
+p3.textContent = transaction3.updateAssetQuantity()
 
 let p4 = document.getElementById("transaction4")
-p4.textContent = `${transaction4.updateAssetQuantity()}`
+p4.textContent = transaction4.updateAssetQuantity()
 
 
 

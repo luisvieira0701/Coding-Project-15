@@ -18,7 +18,7 @@ export class Transaction {
 
             if (this.type === 'buy') {
                 asset.quantity += this.quantity
-                console.log(`${this.quantity} of ${asset.name} purchased. New quantity: ${asset.quantity}`)
+                return `${this.quantity} of ${asset.name} purchased. New quantity: ${asset.quantity}`
             }
 
             else if (this.type === 'sell') {
@@ -26,7 +26,7 @@ export class Transaction {
                     throw new Error(`Insufficient quantity for sale of ${asset.name}`);
             }  
                 asset.quantity -= this.quantity
-                console.log(`${this.quantity} of ${asset.name} sold. New quantity: ${asset.quantity}`)
+                return `${this.quantity} of ${asset.name} sold. New quantity: ${asset.quantity}`
             }
             else {
                 throw new Error (`Invalid Transaction: transaction is neither 'buy' or 'sell'`)
