@@ -21,9 +21,9 @@ export function getAssetById(assetId) {
     const assetWanted = assetArray.find(asset => assetId === asset.id)
 
     if (assetWanted) {
-        return (`Asset Name:${assetWanted.name}, Asset Type: ${assetWanted.type}, Asset Price: $${assetWanted.price}, Asset Quantity: ${assetWanted.quantity}`)
+        return assetWanted
     } else {
-        return 'Asset not found'
+        return null
     }
         
 }
